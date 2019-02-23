@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Question 01</title>
 </head>
 <body>
+    <script>
 
+        var vehicleName = "Toyota";
+
+        function printVehicleNameOuter() {
+            console.log(this.vehicleName);
+        }
+
+        console.log(this);
+
+        printVehicleNameOuter();
+
+        var vehicle = {
+            vehicleName: "Nissan",
+            printVehicleNameInner: printVehicleNameOuter
+        };
+
+        vehicle.printVehicleNameInner();
+    </script>
 </body>
 </html>
