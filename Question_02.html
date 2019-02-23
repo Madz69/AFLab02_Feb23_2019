@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Question 02</title>
 </head>
 <body>
+    <script>
 
+        function taxCalculator(tax) {
+            var taxPercentage = tax;
+            return function (amount) {
+                return amount * tax / 100
+            }
+        }
+        var calculator = taxCalculator(10);
+        console.log(calculator(90));
+
+    </script>
 </body>
 </html>
